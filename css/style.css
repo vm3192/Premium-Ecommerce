@@ -1,3 +1,11 @@
+@charset "UTF-8";
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:regular&display=swap);
+
+@import url(https://fonts.googleapis.com/css?family=Bebas+Neue:regular&display=swap);
+
+@import url(https://fonts.googleapis.com/css?family=Lobster:regular&display=swap);
+
 * {
   padding: 0;
   margin: 0;
@@ -38,7 +46,7 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font-family: "";
+  font-family: "Bebas Neue";
 }
 
 input,
@@ -91,6 +99,136 @@ h6 {
   font-weight: inherit;
 }
 
+.btn {
+  display: inline-block;
+  color: #fff;
+  border-radius: 2px;
+  background: #3cc395;
+  padding: 0.35em 0.75em;
+}
+
+.btn:active {
+  opacity: .6;
+}
+
+/* Слайдер */
+
+/* Слайдер запущен */
+
+/* Слайдер с точками */
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* Ограничивающая оболочка */
+
+.slick-list {
+  overflow: hidden;
+  margin: 0px -1px;
+}
+
+/* Лента слайдов */
+
+.slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* Слайд */
+
+/* Слайд активный (показывается) */
+
+/* Слайд основной */
+
+/* Слайд по центру */
+
+/* Клонированный слайд */
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* Стрелка */
+
+.slick-arrow {
+  font-size: 0;
+  background: none;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+/* Стрелка влево */
+
+.slick-arrow.slick-prev {
+  left: 30px;
+}
+
+/* Стрелка вправо */
+
+.slick-arrow.slick-next {
+  right: 30px;
+}
+
+/* Стрелка не активная */
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* Точки (булиты) */
+
+.slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 49%;
+  bottom: -9px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 0px -5px;
+}
+
+/* Активная точка */
+
+/* Элемент точки */
+
+.slick-dots li button {
+  width: 9px;
+  height: 9px;
+  background: #fff;
+  border-radius: 50%;
+  font-size: 0;
+  margin: 0px 5px;
+}
+
+/* Активный элемент точки */
+
+.slick-dots li.slick-active button {
+  opacity: 0.6;
+}
+
+/* !!! если слайдер находится внутри flex-элемента либо он сам flex-элемент, тогда для flex-элемента нужно обязательно указать параметр       min-width: 0;     */
+
+.bottom-banner__slider .slick-arrow.slick-prev::before {
+  content: url(../img/icons/left-arrow.svg);
+  width: 30px;
+  height: 88px;
+}
+
+.bottom-banner__slider .slick-arrow.slick-next::before {
+  content: url(../img/icons/right-arrow.svg);
+  width: 30px;
+  height: 88px;
+}
+
+.container {
+  max-width: 975px;
+  margin: 0 auto;
+}
+
 .wrapper {
   overflow: hidden;
   width: 100%;
@@ -104,21 +242,374 @@ h6 {
           flex-direction: column;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .main {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
 }
 
-@media (max-width: 1212px) {
-  .container {
-    max-width: 1140px;
-  }
+.header__top-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0 18px;
+}
+
+.header__search {
+  border: 1px solid #e1e1e1;
+  padding-right: 30px;
+  position: relative;
+}
+
+.header__search input {
+  line-height: 30px;
+  width: 405px;
+}
+
+.header__search::after {
+  content: url(../img/icons/search.svg);
+  position: absolute;
+  right: 8px;
+  top: 4px;
+}
+
+.header__basket {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__basket img {
+  margin-right: 17px;
+}
+
+.header__basket span {
+  color: #a1a1a1;
+  font-size: 33px;
+}
+
+.header__bottom-row {
+  background-color: #4ccfc1;
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__link {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  font-size: 21px;
+  line-height: 171.42857%;
+  color: #fff;
+}
+
+.header__link:hover {
+  text-decoration: underline;
+}
+
+.header__link a {
+  color: inherit;
+}
+
+.header__link:not(:first-child) {
+  padding-left: 24px;
+  position: relative;
+}
+
+.header__link:not(:first-child)::before {
+  content: "|";
+  position: absolute;
+  left: 0;
+}
+
+.top-banner {
+  background: url(../img/top-banner_bg.jpg);
+  padding: 55px 0 45px;
+}
+
+.top-banner__slider {
+  position: relative;
+}
+
+.top-banner__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 50px;
+}
+
+.top-banner__left-side {
+  margin-right: 100px;
+}
+
+.top-banner__right-side {
+  color: #fff;
+  max-width: 410px;
+}
+
+.top-banner__title {
+  font-size: 61px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.top-banner__text {
+  font-family: "Open Sans";
+  font-size: 17px;
+  line-height: 164.70588%;
+  margin-bottom: 20px;
+}
+
+.top-banner__btn {
+  display: inline-block;
+  color: inherit;
+  font-size: 27px;
+  border: 3px solid;
+  border-radius: 6px;
+  padding: 8px 25px;
+}
+
+.top-banner__btn:active {
+  opacity: 0.6;
+}
+
+.bottom-banner {
+  position: relative;
+}
+
+.bottom-banner__slider {
+  overflow: hidden;
+}
+
+.bottom-banner__item {
+  border-right: 0.5px solid #e7e7e7;
+  border-left: 0.5px solid #e7e7e7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 25px 0px 30px;
+}
+
+.bottom-banner__left {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.bottom-banner__picture {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto;
+}
+
+.bottom-banner__picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.bottom-banner__right {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.bottom-banner__title {
+  font-size: 27px;
+  color: #afafaf;
+  margin-bottom: 20px;
+}
+
+.bottom-banner__btn {
+  font-size: 19px;
+}
+
+.title {
+  background: url(../img/top-banner_bg.jpg);
+}
+
+.title__title {
+  font-size: 31px;
+  line-height: 209.67742%;
+  color: #fff;
+  text-transform: uppercase;
+  margin-left: 40px;
+}
+
+.cards {
+  margin-bottom: 70px;
+}
+
+.cards__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0px 25px;
+}
+
+.cards__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 255px;
+          flex: 1 1 255px;
+  margin: 0px 25px;
+  background: url(../img/card-bg.svg) 0 0/100% 100% no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0px 30px;
+  margin-top: 45px;
+  overflow: visible;
+  position: relative;
+}
+
+.cards__item::before {
+  content: "";
+  background: #3cc395;
+  height: 5px;
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+}
+
+.cards__picture {
+  width: 140px;
+  height: 140px;
+  margin-bottom: 10px;
+}
+
+.cards__picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.cards__title {
+  font-size: 27px;
+  color: #afafaf;
+  margin-bottom: 10px;
+}
+
+.cards__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cards__footer span {
+  font-size: 27px;
+  color: #afafaf;
+  margin-right: 15px;
+}
+
+.footer__top {
+  background: #3cc3b5;
+  padding-top: 40px;
+}
+
+.footer__top-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__top-box {
+  color: #fff;
+}
+
+.footer__top-title {
+  font-size: 27px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.footer__top-list {
+  margin-bottom: 40px;
+}
+
+.footer__top-link {
+  color: inherit;
+  font-family: "Open Sans";
+  font-size: 15px;
+  line-height: 186.66667%;
+}
+
+.footer__top-link:hover {
+  text-decoration: underline;
+}
+
+.footer__bottom {
+  min-height: 45px;
+  background: #2da89b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__bottom-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Open Sans";
+  font-size: 15px;
+  color: #fff;
 }
 
 @media (max-width: 1199px) {
@@ -130,6 +621,12 @@ h6 {
 @media (max-width: 991px) {
   .container {
     max-width: 720px;
+  }
+}
+
+@media (max-width: 987px) {
+  .container {
+    max-width: 1140px;
   }
 }
 
